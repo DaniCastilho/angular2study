@@ -7,7 +7,7 @@ export class CursosService {
 
   constructor() { }
     getCursos(){
-      return ['java', 'Ext Js', 'Angular'];;
+      return ['java', 'Ext Js', 'Angular', 'hiusad'];
 
     }
 }
