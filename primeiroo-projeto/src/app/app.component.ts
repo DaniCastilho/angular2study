@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 
+import { DataBindingComponent } from './data-binding/data-binding.component';
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'my-app',
+  template: `
+      <h1> Angular 2 Boilerplate </h1>
+      <p> Hello World! </p>
+  `,
+  directives: [DataBindingComponent]
 })
-export class AppComponent {
-  title = 'olá mundo';
-}
+export class AppComponent {}
