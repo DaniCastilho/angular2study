@@ -13,12 +13,21 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
   urlImagem = 'http://lorempixel.com/400/200/nature/';
 
+  conteudoAtual:string  = '';
   getValor(){
     return 1;
   }
 
   getCurtirCurso(){
     return true;
+  }
+
+  onClick(){
+    alert('Botão clicado')
+  }
+  onKeyup(event:KeyboardEvent){
+    // console.log(event.target.value)
+    // this.conteudoAtual = event.target.value;
   }
   ngOnInit() {
   }
