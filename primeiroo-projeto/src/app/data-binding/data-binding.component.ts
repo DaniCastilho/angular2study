@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { InputPropertyComponent } from './input-property.component';
+
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -19,7 +21,9 @@ export class DataBindingComponent implements OnInit {
 
   nome : string = 'asd';
   pessoa = {nome:'', idade: 18}
-  
+
+  nomeCurso: string ='Curso Angular 2'
+
   getValor(){
     return 1;
   }
