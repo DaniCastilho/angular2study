@@ -1,4 +1,4 @@
-<section class="property-binding">
+<!--<section class="property-binding">
   <article>
     <h3>Interpolation / interpolação</h3>
     <p>String renderizada com Interpolation {{ url }}</p>
@@ -79,5 +79,32 @@
         passe o mouse sobre mim!
       </span>
     </div>
+  </article>
+</section>-->
+<section>
+  <article>
+    <h3>Two-way-binding</h3>
+      <div>
+        <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+        >
+
+        <input type="text"
+        [(ngModel)]="nome"
+        >
+
+        <p>Você digitou {{ nome }}</p>
+      </div>
+      Meu nome é  {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos.<br>
+        <input type="text"
+        [(ngModel)]="pessoa.nome"
+        >
+        <input type="text"
+        [(ngModel)]="pessoa.idade"
+        >
+      <div>
+
+      </div>
   </article>
 </section>

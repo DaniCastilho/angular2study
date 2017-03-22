@@ -17,6 +17,9 @@ export class DataBindingComponent implements OnInit {
   conteudoSalvo : string  = '';
   isMouseOver = false;
 
+  nome : string = 'asd';
+  pessoa = {nome:'', idade: 18}
+  
   getValor(){
     return 1;
   }
@@ -29,7 +32,7 @@ export class DataBindingComponent implements OnInit {
     alert('Botão clicado')
   }
   onKeyup(event:KeyboardEvent){
-    this.conteudoAtual = event.target.value;
+    // this.conteudoAtual = event.target.value;
   }
 
   onSave(valor : string){
