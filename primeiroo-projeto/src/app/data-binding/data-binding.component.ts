@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css']
+  styleUrls: ['./data-binding.component.css'],
 })
 export class DataBindingComponent implements OnInit {
 
@@ -13,7 +13,10 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
   urlImagem = 'http://lorempixel.com/400/200/nature/';
 
-  conteudoAtual:string  = '';
+  conteudoAtual : string  = '';
+  conteudoSalvo : string  = '';
+  isMouseOver = false;
+
   getValor(){
     return 1;
   }
@@ -26,8 +29,15 @@ export class DataBindingComponent implements OnInit {
     alert('Botão clicado')
   }
   onKeyup(event:KeyboardEvent){
-    // console.log(event.target.value)
-    // this.conteudoAtual = event.target.value;
+    this.conteudoAtual = event.target.value;
+  }
+
+  onSave(valor : string){
+    this.conteudoSalvo = valor;
+  }
+
+  onMouseSpan(){
+    this.isMouseOver = !this.isMouseOver;
   }
   ngOnInit() {
   }

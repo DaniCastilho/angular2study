@@ -59,7 +59,25 @@
     <div>
       <button (click)="onClick()">Me clique!</button>
       <br><br>
-      <input type="text" (keyup)="onKeyup($event)">
+      <input type="text" 
+      (keyup)="onKeyup($event)"
+      (keyup.enter)="onSave(campo.value)"
+      (blur)="onSave(campo.value)"
+      #campo
+      >
+      <div>
+         conteúdo atual: {{ conteudoAtual }}
+      </div>
+      <div>
+         conteúdo salvo: {{ conteudoSalvo }}
+      </div>
+      <span 
+        (mouseover)="onMouseSpan()"
+        (mouseout)="onMouseSpan()"
+        [class.highlight]="isMouseOver"
+        >
+        passe o mouse sobre mim!
+      </span>
     </div>
   </article>
 </section>
