@@ -80,8 +80,8 @@
       </span>
     </div>
   </article>
-</section>-->
-<!--<section>
+</section>
+<section>
   <article>
     <h3>Two-way-binding</h3>
       <div>
@@ -113,5 +113,6 @@
   <article>
     <h3>Input/Output Properties</h3>
     <curso [nome]="nomeCurso"></curso>
+    <contador [valor]="valorInicial" (mudouValor)="onValorMudou($event)"> </contador>
   </article>
 </section>

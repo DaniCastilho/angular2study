@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 import { InputPropertyComponent } from './input-property.component';
+import { OutputPropertyComponent } from './output-property.component';
+
 
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
-  styleUrls: ['./data-binding.component.css'],
+  styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
 
@@ -24,6 +26,8 @@ export class DataBindingComponent implements OnInit {
 
   nomeCurso: string ='Curso Angular 2'
 
+  valorInicial:number = 10;
+
   getValor(){
     return 1;
   }
@@ -35,8 +39,8 @@ export class DataBindingComponent implements OnInit {
   onClick(){
     alert('Botão clicado')
   }
-  onKeyup(event:KeyboardEvent){
-    // this.conteudoAtual = event.target.value;
+  onKeyup(event:any){
+    this.conteudoAtual = event.target.value;
   }
 
   onSave(valor : string){
@@ -46,6 +50,11 @@ export class DataBindingComponent implements OnInit {
   onMouseSpan(){
     this.isMouseOver = !this.isMouseOver;
   }
+
+  onValorMudou(event){
+    alert(event.novoValor)
+  }
+
   ngOnInit() {
   }
 
