@@ -11,6 +11,7 @@ import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropertyComponent } from './data-binding/input-property.component';
 import { OutputPropertyComponent } from './data-binding/output-property.component';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { OutputPropertyComponent } from './data-binding/output-property.componen
     DataBindingComponent,
     InputPropertyComponent,
     OutputPropertyComponent,
+    CicloComponent
   ],
   imports: [
     BrowserModule,
